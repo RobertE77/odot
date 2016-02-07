@@ -62,4 +62,13 @@ RSpec.configure do |config|
 
   config.expose_current_running_example_as :example
 
+  #added the following to utilize shoulda-matchers
+  Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    # Choose a test framework:
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
 end
